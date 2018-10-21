@@ -1,12 +1,12 @@
-AC_INIT([pqchecker], [1.2.1], [abdelhamid@meddeb.net])
+AC_INIT([pqchecker], [1.2.2], [abdelhamid@meddeb.net])
 AC_CONFIG_HEADERS([config.h])
 AC_ARG_VAR([LDAPSRC],AS_HELP_STRING([path to openldap server source files root location]))
 AC_ARG_VAR([JAVAHOME],AS_HELP_STRING([path to jdk root location]))
 AC_ARG_VAR([PARAMDIR],AS_HELP_STRING([path to password quality parameters file location]))
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AM_PROG_AR
 LT_INIT
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CC
 AC_CHECK_FILES([$LDAPSRC/include/ldap_config.hin $LDAPSRC/include/portable.hin],
                 [],
@@ -27,5 +27,7 @@ AC_DEFINE_UNQUOTED([PARAMS_DATA_FILE],["$PARAMDIR/pqparams.dat"],["Parameters da
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
+doc/Makefile
+doc/fr/Makefile
 ])
 AC_OUTPUT
