@@ -1,6 +1,7 @@
 m4/* linguist-vendored
 doc/* linguist-vendored
 po/* linguist-vendored
+autom4te.cache/* linguist-vendored
 *.sh linguist-vendored
 *.bash linguist-vendored
 install-sh linguist-vendored
