@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------
 pqChecker, shared library plug-in for OpenLDAP server / ppolicy overlay
-Checking of password quality.
+Checking of passwords quality.
 Copyright (C) 2014, Abdelhamid MEDDEB (abdelhamid@meddeb.net)  
 
 This program is free software: you can redistribute it and/or modify
@@ -18,11 +18,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define _POSIX_SOURCE 1
 
-#include <ctype.h>
 #include <stdbool.h>
 
-extern
-bool set_params(const char *params, const char *fmt);
+#define SHMDEFAULTNBRECORDS 50000
+#define SHMFIELDSIZE 196
+#define SHMNAME "000h01e02d04i15l21.shm"
 
-extern
-bool get_params(char *params, const char *fmt);
+bool shmInit(const unsigned int nbRecords);
+void getShmSize(unsigned int size);
+bool shmPush(const char *data);
+bool shmPop();
+bool shmGet(char *data);
+void setCacheData(bool cacheData);
+bool isCacheData();
+bool isShmInitialized();

@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------
 pqChecker, shared library plug-in for OpenLDAP server / ppolicy overlay
-Checking of password quality.
+Checking of passwords quality.
 Copyright (C) 2014, Abdelhamid MEDDEB (abdelhamid@meddeb.net)  
 
 This program is free software: you can redistribute it and/or modify
@@ -18,11 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define _POSIX_SOURCE 1
 
-#include <ctype.h>
 #include <stdbool.h>
+#include <jni.h>
 
-extern
-bool set_params(const char *params, const char *fmt);
+#define SCKPATH "/var/run/pqmessenger/sck"
 
-extern
-bool get_params(char *params, const char *fmt);
+extern JavaVM *javaVM;
+
+bool doListen();
+bool stopListen();
+bool doSend(const char *data);
+void sendPassword(char *pwd, char *user);
+void doBroadcastCacheData();
