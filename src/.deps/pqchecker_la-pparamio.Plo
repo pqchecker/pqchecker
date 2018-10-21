@@ -1,0 +1,156 @@
+pqchecker_la-pparamio.lo: pparamio.c /usr/include/stdc-predef.h \
+ /usr/include/ctype.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h /usr/include/string.h \
+ /usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/lib/gcc/x86_64-linux-gnu/5/include/stdbool.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/portable.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/fdset.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ldap_cdefs.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ldap_features.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/assert.h \
+ /usr/include/assert.h \
+ /home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/localize.h \
+ /usr/include/syslog.h /usr/include/x86_64-linux-gnu/sys/syslog.h \
+ /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/syslog-path.h \
+ /usr/include/x86_64-linux-gnu/bits/syslog.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/libintl.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h pqcheck.h ../config.h \
+ pparamio.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/ctype.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/string.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/5/include/stdbool.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/portable.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/fdset.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ldap_cdefs.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ldap_features.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/assert.h:
+
+/usr/include/assert.h:
+
+/home/abdou/dvlp/tmp/openldap-2.4.42+dfsg/include/ac/localize.h:
+
+/usr/include/syslog.h:
+
+/usr/include/x86_64-linux-gnu/sys/syslog.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/syslog-path.h:
+
+/usr/include/x86_64-linux-gnu/bits/syslog.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/libintl.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+pqcheck.h:
+
+../config.h:
+
+pparamio.h:
