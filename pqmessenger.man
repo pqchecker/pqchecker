@@ -1,0 +1,64 @@
+.\" Manpage for pqmessenger.
+.\" Contact abdelhamid@meddeb.net to correct errors or typos.
+.TH man 3 "24 Feb. 2015" "1.2" "pqMessenger"
+.SH NAME
+pqMessenger \- A messaging middleware for pqChecker plug-in and a JMS server.
+.SH SYNOPSIS
+Allows two-way communication between pqchecker.so plug-in for OpenLDAP and a Java JMS compliant application.
+.SH DESCRIPTION
+pqChecker plug-in for OpenLDAP directory server use a text file: 
+.B
+pqparams.dat
+to store the passwords quality parameters. pqMessenger allows to read and modify this file content by a Java JMS compliant application.
+
+ --------------        -------------    JNI    -------------         JMS           ----------------------------
+.br
+| pqparams.dat |<---->|  pqChecker  |<------->| pqMessenger |<------------------->| JMS compliant application  |
+.br
+ --------------        -------------           -------------                       ----------------------------
+
+.SH SETTINGS
+/etc/default/prmessenger contains the parameters to configure module startup:
+.LP
+.B
+PQMESSENGER_HOME: 
+Path to pqmessenger jar file location (default /opt/pqmessenger).
+.LP
+.B
+NATIVE_LIB_HOME: 
+Path to pqchecker.so file location (default /usr/lib/ldap).
+.LP
+.B
+CONFIG_HOME: 
+Path to configuration files.
+.LP
+.B
+CONFIG_FILE: 
+Configuration file name (default config.xml).
+.LP
+.B
+CONFIGLOG_FILE: 
+Logging configuration file name (default log4j.xml).
+.LP
+Running pqMessenger is supported by Apache JSVC. Therefore, the whole parameters of this utility can be used to launch pqMessenger, especially:
+.LP
+.B
+JAVA_HOME: 
+Path to Java JDK.
+.LP
+.B
+PQMESSENGER_USER:
+System user running pqMessenger.
+.LP
+Consult jsvc documentation for details on this.
+.LP
+In addition to this setting at startup, an XML configuration file contains other parameters. Mainly, the parameters of the JMS server: address, port, login IDs. This file may also contains an override value of NATIVE_LIB_HOME.
+
+.SH SEE ALSO
+pqchecker(3), jsvc(1)
+.SH BUGS
+abdelhamid@meddeb.net
+.br
+https://github.com/ameddeb/pqchecker/issues
+.SH AUTHOR
+Abdelhamid MEDDEB (abdelhamid@meddeb.net)

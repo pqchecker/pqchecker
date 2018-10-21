@@ -1,0 +1,63 @@
+.\" Manpage for pqmessenger.
+.\" Contact abdelhamid@meddeb.net to correct errors or typos.
+.TH man 3 "24 Fév. 2015" "1.2" "pqMessenger"
+.SH NOM
+pqMessenger \- Un module intermédiaire de transport de messages applicatifs entre pqChecker et un serveur JMS.
+.SH SYNOPSIS
+Permet la communication dans les deux sens entre le plug-in natif pqchecker.so pour OpenLDAP et une application compatible Java JMS.
+.SH DESCRIPTION
+Le plug-in pour le serveur d'annuaire OpenLDAP "pqchecker" utilise le contenu d'un fichier texte pour stocker les paramètres de la qualité des mots de passe: 
+.B
+pqparams.dat.
+pqMessenger permet à une application compatible avec Java JMS de lire et de modifier ces paramètres.
+
+ --------------        -------------    JNI    -------------         JMS           ----------------------------
+.br
+| pqparams.dat |<---->|  pqChecker  |<------->| pqMessenger |<------------------->| Application compatible JMS |
+.br
+ --------------        -------------           -------------                       ----------------------------
+
+.SH PARAMETRAGE
+/etc/default/pqmessenger contient les paramètres de démarrage du module pqMessenger:
+.LP
+.B
+PQMESSENGER_HOME: 
+Chemin pour l'emplacement du fichier jar de pqmessenger (par défaut /opt/pqmessenger).
+.LP
+.B
+NATIVE_LIB_HOME: 
+Chemin pour l'emplacement du fichier pqchecker.so (par défaut /usr/lib/ldap).
+.LP
+.B
+CONFIG_HOME: 
+Chemin pour les fichiers de configuration.
+.LP
+.B
+CONFIG_FILE: 
+Nom du fichier configuration (config.xml par défaut).
+.LP
+.B
+CONFIGLOG_FILE: 
+Nom du fichier configuration des fichiers journaux ou Log (log4j.xml par défaut).
+.LP
+L'exécution de pqMessenger est prise en charge par Apache JSVC, donc tout paramètre de lancement de cet utilitaire peut être utilisé pour lancer pqMessenger, notamment:
+.LP
+.B
+JAVA_HOME: 
+Chemin d'installation de Java JDK.
+.LP
+.B
+PQMESSENGER_USER:
+Utilisateur système qui exécute pqMessenger
+.LP
+Consulter la documentation de JSVC pour plus de détails à ce sujet.
+.LP
+En plus de ce paramétrage au démarrage, un fichier de configuration au format XML contient d'autres paramètres. Principalement, les paramètres du serveur JMS: adresse, port, identifiants de connexion. Ce fichier peut contenir aussi une valeur qui surcharge et remplace celle du paramètre de démarrage NATIVE_LIB_HOME. 
+.SH VOIR AUSSI
+pqchecker(3), jsvc(1)
+.SH BUGS
+abdelhamid@meddeb.net
+.br
+https://github.com/ameddeb/pqchecker/issues
+.SH AUTEUR
+Abdelhamid MEDDEB (abdelhamid@meddeb.net)
