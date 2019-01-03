@@ -24,14 +24,13 @@ docapi-fr/
 *.log
 
 Makefile
+config.h
+config.status
+stamp-h1
 *.o
+*.Plo
 *.la
 *.lo
 *.so
 *.gz
-autom4te.cache/
 *~
-config.h
-config.status
-libtool
-stamp-h1
